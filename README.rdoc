@@ -1,7 +1,7 @@
 == Welcome!
 
 Developers: 
-    1. Louie Pinca
+    1. Pinky
     2.
     3. 3kings@gmail.com
 

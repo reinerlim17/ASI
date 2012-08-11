@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
+gem 'devise'
 
 group :development do
 	gem 'sqlite3'

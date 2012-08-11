@@ -1,8 +1,10 @@
 <div>
 	<%= @inquire.name %>
+	<h5>Created by: <%= @inquire.user.email %></h5>
 </div>
 <div>
 	<%= link_to "Delete", inquire_path(@inquire), :confirm => "Are you sure??", :method => :delete %> ||
-	<%= link_to "Edit", edit_inquire_path %>
+	<%= link_to "Edit", edit_inquire_path %> >>>>
+	<%= link_to "Transfer to Client", '#' %>
 </div>
 <%= link_to "<< Back to All Inquire", inquires_path %>

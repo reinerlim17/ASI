@@ -1,15 +1,18 @@
 class InquiresController < ApplicationController
+	before_filter :authenticate_user!
 
 	def index
 		@inquires = Inquire.all
 	end
 
 	def new
-		@inquire = Inquire.new
+		@user = current_user
+		@inquire = @user.inquires.build
 	end
 
 	def create
-		@inquire = Inquire.new(params[:inquire])
+		@user = current_user
+		@inquire = @user.inquires.build(params[:inquire])
 		@inquire.save
 		redirect_to @inquire
 	end
@@ -34,4 +37,9 @@ class InquiresController < ApplicationController
 		@inquire.save
 		redirect_to @inquire
 	end
+
+	private
+		def find_user_id
+			@user = current_user
+		end
 end

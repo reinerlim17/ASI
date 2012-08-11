@@ -2,6 +2,6 @@
 <%= link_to "New Inquire", new_inquire_path %>
 <ul>
 <% @inquires.each do |inquire| %>
-	<li><%= link_to inquire.name, inquire_path(inquire) %></li>
+	<li><%= link_to inquire.company_name, inquire_path(inquire) %></li>
 <% end %>
 </ul>

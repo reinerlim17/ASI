@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(:version => 20120811160205) do
   end
 
   create_table "inquires", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "company_name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "user_id"
   end
 

@@ -38,8 +38,8 @@ class InquiresController < ApplicationController
 		redirect_to @inquire
 	end
 
-	private
-		def find_user_id
-			@user = current_user
-		end
+	def client
+		@client = Client.new
+		@inquire = Inquire.find(params[:id])
+	end
 end

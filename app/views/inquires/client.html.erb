@@ -1,0 +1,8 @@
+<h2>New Client</h2>
+<%= form_for @client do |f| %>
+	<div>
+		<%= f.label :company_name %>
+		<%= f.text_field :company_name, :value => @inquire.company_name %>
+	</div>
+	<%= f.submit %>
+<% end %>

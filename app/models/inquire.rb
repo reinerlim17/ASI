@@ -1,5 +1,5 @@
 class Inquire < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :company_name
   belongs_to :user
   belongs_to :client
 end

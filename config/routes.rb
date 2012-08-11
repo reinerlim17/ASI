@@ -5,7 +5,11 @@ ASI::Application.routes.draw do
   devise_for :users
   root :to => "pages#home"
     
-  resources :inquires
+  resources :inquires do
+  	member do
+  		get 'client'
+  	end
+  end
   resources :clients
 
   end

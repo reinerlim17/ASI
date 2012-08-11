@@ -4,9 +4,15 @@
           <%= link_to "AUTOMATION & SECURITY INC", '#', id: "logo" %>
           <nav>
             <ul class="nav pull-right">
+              <% if user_signed_in? %>
               <li><%= link_to "Home",    '#' %></li>
               <li><%= link_to "Help",    '#' %></li>
-              <li><%= link_to "Sign in", '#' %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+              <li><%= link_to current_user.email, '#' %></li>
+              <% else %>
+              <li><%= link_to "Register", new_user_registration_path %></li>
+              <li><%= link_to "Sign in", new_user_session_path %></li>
+              <% end %>
             </ul>
           </nav>
         </div>

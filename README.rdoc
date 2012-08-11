@@ -1,10 +1,12 @@
 == Welcome!
 
 Developers: 
-    1.
+    1. Louie Pinca
     2.
     3. 3kings@gmail.com
 
 This Web And Mobile Application is Own by ASI.COM.PH
+
+
 
 

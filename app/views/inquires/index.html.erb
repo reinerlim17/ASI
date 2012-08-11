@@ -1,0 +1,7 @@
+<h2>All Inquires</h2>
+<%= link_to "New Inquire", new_inquire_path %>
+<ul>
+<% @inquires.each do |inquire| %>
+	<li><%= inquire.name %></li>
+<% end %>
+</ul>

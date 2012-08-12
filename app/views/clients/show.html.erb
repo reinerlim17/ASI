@@ -1,3 +1,9 @@
 <h2>Client Info</h2>
-
-<%= @client.company_name %>
+<div>
+	<%= @client.company_name %>
+</div>
+<div>
+	<%= link_to "Delete", '#' %> ||
+	<%= link_to "Edit", edit_client_path %>
+</div>
+<%= link_to "<<< Back to All Clients", clients_path %>

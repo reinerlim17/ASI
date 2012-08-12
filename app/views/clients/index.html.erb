@@ -4,6 +4,6 @@
 
 <ul>
 	<% @clients.each do |client|%>
-	<li><%= client.company_name %></li>
+	<li><%= link_to client.company_name, client_path(client) %></li>
 	<% end %>
 </ul>

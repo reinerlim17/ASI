@@ -1,5 +1,13 @@
 <%= form_for @inquire do |f| %>
 	<div>
+		<%= f.label :nature_of_business_id %>
+		<%= f.select :nature_of_business_id, NatureOfBusiness.all.map{ |nature| [nature.name, nature.id]} %>
+	</div>
+	<div>
+		<%= f.label :source_id %>
+		<%= f.select :source_id, Source.all.map{ |source| [source.name, source.id]} %>
+	</div>
+	<div>
 		<%= f.label :company_name %>
 		<%= f.text_field :company_name %>
 	</div>

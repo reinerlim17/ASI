@@ -1,0 +1,21 @@
+<%= form_for(@nature_of_business) do |f| %>
+  <% if @nature_of_business.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nature_of_business.errors.count, "error") %> prohibited this nature_of_business from being saved:</h2>
+
+      <ul>
+      <% @nature_of_business.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

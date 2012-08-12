@@ -4,6 +4,10 @@ class ClientsController < ApplicationController
 		@clients = Client.all
 	end
 
+	def new
+		@client = Client.new
+	end
+
 	def create
 		@client = Client.new(params[:client])
 		@client.save

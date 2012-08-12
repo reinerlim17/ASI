@@ -11,19 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120811160205) do
+ActiveRecord::Schema.define(:version => 20120812045825) do
 
   create_table "clients", :force => true do |t|
     t.string   "company_name"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "user_id"
   end
 
   create_table "inquires", :force => true do |t|
     t.string   "company_name"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
     t.integer  "user_id"
+    t.string   "house_number"
+    t.string   "street"
+    t.string   "barangay"
+    t.string   "town"
+    t.string   "province"
+    t.string   "condo"
+    t.string   "primary_contact_person"
+    t.string   "primary_contact_number"
+    t.string   "primary_fax_number"
+    t.string   "primary_email"
+    t.string   "secondary_contact_person"
+    t.string   "secondary_contact_number"
+    t.string   "secondary_fax_number"
+    t.string   "secondary_email"
+    t.string   "interest"
   end
 
   create_table "users", :force => true do |t|

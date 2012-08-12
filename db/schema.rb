@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(:version => 20120812053825) do
     t.string   "company_name"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-    t.integer  "user_id"
   end
 
   create_table "inquires", :force => true do |t|
